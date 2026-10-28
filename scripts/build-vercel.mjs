@@ -1,0 +1,2 @@
+import{copyFileSync,mkdirSync}from'node:fs';import path from'node:path';
+const files=["chatbot-ia.css","chatbot-ia.js","config-afiliados.js","daily-deals-engine.js","error-monitor.js","index.html","legal.html","robots.txt","script.js","sitemap.xml","styles.css"];for(const file of files){const target=path.join('vercel-public',file);mkdirSync(path.dirname(target),{recursive:true});copyFileSync(file,target);}console.log('Web preparada: '+files.length+' archivos.');
